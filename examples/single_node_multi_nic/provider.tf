@@ -54,14 +54,14 @@ provider "restful" {
   }
 
   security = {
-    /*http = {
+    http = {
       basic = {
         username = var.f5os_api_username
         password = var.f5os_api_password
       }
-    }*/
+    }
 
-    apikey = [
+    /*apikey = [
       {
         in    = "header"
         name  = "Authorization"
@@ -72,6 +72,6 @@ provider "restful" {
         name  = "Content-Type"
         value = "application/yang-data+json"
       }
-    ]
+    ]*/
   }
 }
