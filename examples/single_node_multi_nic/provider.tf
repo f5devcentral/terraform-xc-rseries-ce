@@ -38,8 +38,8 @@ provider "restful" {
   create_method = "POST"
   delete_method = "DELETE"
   header = {
-     Accept       = "application/yang-data+json"
-     Content-Type = "application/yang-data+json"
+    Accept       = "application/yang-data+json"
+    Content-Type = "application/yang-data+json"
   }
 
   client = {
@@ -60,5 +60,12 @@ provider "restful" {
         password = var.f5os_api_password
       }
     }
+    apikey = [
+      {
+        in    = "header"
+        name  = "Content-Type"
+        value = "application/yang-data+json"
+      }
+    ]
   }
 }
