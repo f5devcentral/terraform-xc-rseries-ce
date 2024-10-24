@@ -66,6 +66,11 @@ variable "f5xc_sms_master_nodes_count" {
   default = 1
 }
 
+variable "f5xc_ce_sli_interface" {
+  type    = string
+  default = "enp2s0"
+}
+
 variable "f5xc_api_p12_cert_password" {
   description = "F5 XC API certificate file password"
   type        = string
