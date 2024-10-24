@@ -39,12 +39,14 @@ provider "restful" {
   delete_method = "DELETE"
 
   client = {
+    tls_insecure_skip_verify = true
     retry = {
       status_codes = [500, 502, 503, 504]
       count           = 3
       wait_in_sec     = 1
       max_wait_in_sec = 120
     }
+
   }
 
   security = {
