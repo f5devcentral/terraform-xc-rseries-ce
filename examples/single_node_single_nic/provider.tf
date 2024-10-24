@@ -38,6 +38,11 @@ provider "restful" {
   create_method = "POST"
   delete_method = "DELETE"
 
+  header = {
+    Accept       = "application/yang-data+json"
+    Content-Type = "application/yang-data+json"
+  }
+
   client = {
     retry = {
       status_codes = [500, 502, 503, 504]
