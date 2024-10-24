@@ -56,7 +56,3 @@ provider "restful" {
     }
   }
 }
-
-provider "http-full" {
-  alias = "default"
-}
