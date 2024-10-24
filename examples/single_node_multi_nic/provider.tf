@@ -60,11 +60,12 @@ provider "restful" {
         password = var.f5os_api_password
       }
     }*/
+
     apikey = [
       {
         in    = "header"
         name  = "Authorization"
-        value = "Basic ${var.f5os_api_password}"
+        value = "Basic ${base64encode(var.f5os_api_password)}"
       },
       {
         in    = "header"
