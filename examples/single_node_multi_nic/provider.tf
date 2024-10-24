@@ -71,7 +71,7 @@ provider "restful" {
         in    = "header"
         name = "Authorization"
         #value = "Basic ${base64encode(var.f5os_api_password)}"
-        value = "Authorization: Basic YWRtaW46ZXNzLXB3ZS1mNXNpdGUwMg=="
+        value = "Basic YWRtaW46ZXNzLXB3ZS1mNXNpdGUwMg=="
       }
     ]
   }
