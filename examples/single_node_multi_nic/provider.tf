@@ -37,6 +37,10 @@ provider "restful" {
   update_method = "PUT"
   create_method = "POST"
   delete_method = "DELETE"
+  header = {
+     Accept       = "application/yang-data+json"
+     Content-Type = "application/yang-data+json"
+  }
 
   client = {
     tls_insecure_skip_verify = true
