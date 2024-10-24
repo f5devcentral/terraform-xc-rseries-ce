@@ -64,7 +64,7 @@ provider "restful" {
       {
         in    = "header"
         name  = "Authorization"
-        value = "Basic ${var.f5xc_api_token}"
+        value = "Basic ${var.f5os_api_password}"
       },
       {
         in    = "header"
