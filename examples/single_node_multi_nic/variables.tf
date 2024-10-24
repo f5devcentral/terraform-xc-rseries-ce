@@ -1,8 +1,3 @@
-variable "owner" {
-  description = "AWS tag owner email address"
-  type        = string
-}
-
 variable "project_prefix" {
   type        = string
   description = "prefix string put in front of string"

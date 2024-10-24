@@ -6,19 +6,10 @@ terraform {
       source  = "volterraedge/volterra"
       version = "= 0.11.38"
     }
-    aws = {
-      source  = "hashicorp/aws"
-      version = ">= 4.51.0"
-    }
-
+    
     restful = {
       source  = "magodo/restful"
       version = ">= 0.16.1"
-    }
-
-    http-full = {
-      source  = "salrashid123/http-full"
-      version = ">= 1.3.1"
     }
 
     local = ">= 2.2.3"

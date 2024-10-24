@@ -7,6 +7,9 @@ This example instantiates:
 
 # Usage
 
+- Export F5OS API environment variables with:
+    * `export TF_VAR_f5os_api_username="user"`
+    * `export TF_VAR_f5os_api_password="password"`
 - Export F5 XC API certificate password with:
     * `export VES_P12_PASSWORD="p12 password"`
     * `export TF_VAR_f5xc_api_p12_cert_password="$VES_P12_PASSWORD"`
