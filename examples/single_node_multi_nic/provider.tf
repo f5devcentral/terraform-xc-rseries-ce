@@ -54,13 +54,18 @@ provider "restful" {
   }
 
   security = {
-    http = {
+    /*http = {
       basic = {
         username = var.f5os_api_username
         password = var.f5os_api_password
       }
-    }
+    }*/
     apikey = [
+      {
+        in    = "header"
+        name  = "Authorization"
+        value = "Basic ${var.f5xc_api_token}"
+      },
       {
         in    = "header"
         name  = "Content-Type"
