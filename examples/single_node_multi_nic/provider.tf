@@ -64,14 +64,14 @@ provider "restful" {
     apikey = [
       {
         in    = "header"
-        name  = "Authorization"
-        #value = "Basic ${base64encode(var.f5os_api_password)}"
-        value = "Authorization: Basic YWRtaW46ZXNzLXB3ZS1mNXNpdGUwMg=="
+        name  = "Content-Type"
+        value = "application/yang-data+json"
       },
       {
         in    = "header"
-        name  = "Content-Type"
-        value = "application/yang-data+json"
+        name = "Authorization"
+        #value = "Basic ${base64encode(var.f5os_api_password)}"
+        value = "Authorization: Basic YWRtaW46ZXNzLXB3ZS1mNXNpdGUwMg=="
       }
     ]
   }
