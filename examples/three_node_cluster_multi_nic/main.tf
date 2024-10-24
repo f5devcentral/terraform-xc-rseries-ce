@@ -1,6 +1,6 @@
 module "f5xc_aws_cloud_ce_three_node_multi_nic_new_vpc_new_subnet" {
 source                                 = "../../modules/f5xc/ce/rseries"
-  f5os_tenant                            = format("%s-rseries-ce-test-%s", var.project_prefix, var.project_suffix)
+  f5os_tenant                            = format("%s-%s-%s", var.project_prefix, var.f5xc_cluster_name, var.project_suffix)
   f5os_tenant_config_image               = var.f5os_tenant_config_image
   f5os_tenant_config_nodes               = var.f5os_tenant_config_nodes
   f5os_tenant_config_vlans               = var.f5os_tenant_config_vlans
@@ -12,7 +12,7 @@ source                                 = "../../modules/f5xc/ce/rseries"
   f5xc_api_url                           = var.f5xc_api_url
   f5xc_api_token                         = var.f5xc_api_token
   f5xc_namespace                         = var.f5xc_namespace
-  f5xc_site_name                         = format("%s-rseries-ce-test-%s", var.project_prefix, var.project_suffix)
+  f5xc_site_name                         = format("%s-%s-%s", var.project_prefix, var.f5xc_cluster_name, var.project_suffix)
   f5xc_ce_gw_type                        = var.f5xc_ce_gateway_type
   f5xc_sms_provider_name                 = var.f5xc_sms_provider_name
   f5xc_sms_master_nodes_count            = var.f5xc_sms_master_nodes_count
